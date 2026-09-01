@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             pnlDisplay = new Panel();
+            chkShowPassword = new CheckBox();
             lblSingin = new Label();
             lblForgotPassword = new Label();
             btnAuthenticate = new Button();
@@ -42,11 +43,9 @@
             pbxLogo = new PictureBox();
             lblResqlink = new Label();
             lblSmartEmergency = new Label();
-            lblNeedResQLinkDeployment = new Label();
-            lblRequestSetup = new Label();
             ValidationError = new ErrorProvider(components);
             lblNoAccount = new Label();
-            btnSignup = new Button();
+            lblSignUp = new Label();
             pnlDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ValidationError).BeginInit();
@@ -55,6 +54,7 @@
             // pnlDisplay
             // 
             pnlDisplay.BackColor = Color.White;
+            pnlDisplay.Controls.Add(chkShowPassword);
             pnlDisplay.Controls.Add(lblSingin);
             pnlDisplay.Controls.Add(lblForgotPassword);
             pnlDisplay.Controls.Add(btnAuthenticate);
@@ -65,8 +65,19 @@
             pnlDisplay.Controls.Add(lblCredintials);
             pnlDisplay.Location = new Point(111, 169);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(856, 394);
+            pnlDisplay.Size = new Size(856, 416);
             pnlDisplay.TabIndex = 0;
+            // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(29, 314);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(162, 29);
+            chkShowPassword.TabIndex = 9;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
             // lblSingin
             // 
@@ -94,7 +105,7 @@
             btnAuthenticate.BackColor = Color.Red;
             btnAuthenticate.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAuthenticate.ForeColor = SystemColors.ControlLightLight;
-            btnAuthenticate.Location = new Point(21, 333);
+            btnAuthenticate.Location = new Point(21, 357);
             btnAuthenticate.Name = "btnAuthenticate";
             btnAuthenticate.Size = new Size(776, 45);
             btnAuthenticate.TabIndex = 6;
@@ -181,27 +192,6 @@
             lblSmartEmergency.TabIndex = 3;
             lblSmartEmergency.Text = "Smart Emergency Coordination System";
             // 
-            // lblNeedResQLinkDeployment
-            // 
-            lblNeedResQLinkDeployment.AutoSize = true;
-            lblNeedResQLinkDeployment.ForeColor = SystemColors.ControlLightLight;
-            lblNeedResQLinkDeployment.Location = new Point(227, 583);
-            lblNeedResQLinkDeployment.Name = "lblNeedResQLinkDeployment";
-            lblNeedResQLinkDeployment.Size = new Size(364, 25);
-            lblNeedResQLinkDeployment.TabIndex = 4;
-            lblNeedResQLinkDeployment.Text = "Need ResQLink deployment for your facility?";
-            // 
-            // lblRequestSetup
-            // 
-            lblRequestSetup.AutoSize = true;
-            lblRequestSetup.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            lblRequestSetup.ForeColor = SystemColors.ControlLightLight;
-            lblRequestSetup.Location = new Point(584, 583);
-            lblRequestSetup.Name = "lblRequestSetup";
-            lblRequestSetup.Size = new Size(140, 25);
-            lblRequestSetup.TabIndex = 5;
-            lblRequestSetup.Text = "Request Setup";
-            // 
             // ValidationError
             // 
             ValidationError.ContainerControl = this;
@@ -210,24 +200,25 @@
             // 
             lblNoAccount.AutoSize = true;
             lblNoAccount.ForeColor = SystemColors.ControlLightLight;
-            lblNoAccount.Location = new Point(227, 632);
+            lblNoAccount.Location = new Point(291, 604);
             lblNoAccount.Name = "lblNoAccount";
             lblNoAccount.Size = new Size(197, 25);
             lblNoAccount.TabIndex = 8;
             lblNoAccount.Text = "Don't have an account?";
             lblNoAccount.Click += label1_Click;
             // 
-            // btnSignup
+            // lblSignUp
             // 
-            btnSignup.BackColor = Color.FromArgb(0, 0, 64);
-            btnSignup.ForeColor = Color.Red;
-            btnSignup.Location = new Point(453, 623);
-            btnSignup.Name = "btnSignup";
-            btnSignup.Size = new Size(112, 34);
-            btnSignup.TabIndex = 9;
-            btnSignup.Text = "Sign up";
-            btnSignup.UseVisualStyleBackColor = false;
-            btnSignup.Click += btnSignup_Click;
+            lblSignUp.AutoSize = true;
+            lblSignUp.Cursor = Cursors.Hand;
+            lblSignUp.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblSignUp.ForeColor = SystemColors.ControlLightLight;
+            lblSignUp.Location = new Point(494, 604);
+            lblSignUp.Name = "lblSignUp";
+            lblSignUp.Size = new Size(123, 25);
+            lblSignUp.TabIndex = 10;
+            lblSignUp.Text = "Sign up here";
+            lblSignUp.Click += lblSignUp_Click_1;
             // 
             // frmLogin
             // 
@@ -235,10 +226,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 0, 64);
             ClientSize = new Size(1031, 681);
-            Controls.Add(btnSignup);
+            Controls.Add(lblSignUp);
             Controls.Add(lblNoAccount);
-            Controls.Add(lblRequestSetup);
-            Controls.Add(lblNeedResQLinkDeployment);
             Controls.Add(lblSmartEmergency);
             Controls.Add(lblResqlink);
             Controls.Add(pbxLogo);
@@ -246,6 +235,7 @@
             Name = "frmLogin";
             Text = " frmLogin";
             Load += frmLogin_Load;
+            Click += lblSignUp_Click;
             pnlDisplay.ResumeLayout(false);
             pnlDisplay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxLogo).EndInit();
@@ -267,11 +257,10 @@
         private Label lblResqlink;
         private Label lblSmartEmergency;
         private Label lblForgotPassword;
-        private Label lblNeedResQLinkDeployment;
-        private Label lblRequestSetup;
         private ErrorProvider ValidationError;
         private Label lblNoAccount;
         private Label lblSingin;
-        private Button btnSignup;
+        private Label lblSignUp;
+        private CheckBox chkShowPassword;
     }
 }
