@@ -29,8 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomer_Dashboard));
-            pbxLogo = new PictureBox();
-            panel1 = new Panel();
+            lblDateReported = new Label();
+            pbxMyIncidents = new PictureBox();
+            pbxReportIncident = new PictureBox();
+            pbxLogOut = new PictureBox();
+            lblStatus = new Label();
+            lblLocation = new Label();
+            lblType = new Label();
+            lbl_ID = new Label();
+            lblRecentIcidents = new Label();
+            lblUnresolvedIncidents = new Label();
+            lbl_InProgressIncidents = new Label();
+            lblResolved_Incidents = new Label();
+            lblTotal_Incidents = new Label();
+            pictureBox4 = new PictureBox();
+            pbxInProgress = new PictureBox();
+            panel3 = new Panel();
+            pbxResolved = new PictureBox();
+            pbxTotal_Icidents = new PictureBox();
+            lblQuickActions = new Label();
+            panel5 = new Panel();
+            panel2 = new Panel();
+            panel4 = new Panel();
+            txtDisplayRecentIncidents = new TextBox();
             lblWelcomeLoggedInUser = new Label();
             pbxProfile = new PictureBox();
             btnLogOut = new Button();
@@ -38,184 +59,33 @@
             btnActiveIncidents = new Button();
             btnRreportIncidents = new Button();
             btnDashboard = new Button();
-            panel2 = new Panel();
-            panel5 = new Panel();
-            pbxMyIncidents = new PictureBox();
-            pbxReportIncident = new PictureBox();
-            pbxLogOut = new PictureBox();
-            lblQuickActions = new Label();
-            panel4 = new Panel();
-            txtDisplayRecentIncidents = new TextBox();
-            lblDateReported = new Label();
-            lblStatus = new Label();
-            lblLocation = new Label();
-            lblType = new Label();
-            lbl_ID = new Label();
-            lblRecentIcidents = new Label();
-            panel3 = new Panel();
-            lblUnresolvedIncidents = new Label();
-            lbl_InProgressIncidents = new Label();
-            lblResolved_Incidents = new Label();
-            lblTotal_Incidents = new Label();
-            pictureBox4 = new PictureBox();
-            pbxInProgress = new PictureBox();
-            pbxResolved = new PictureBox();
-            pbxTotal_Icidents = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pbxLogo).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxProfile).BeginInit();
-            panel2.SuspendLayout();
-            panel5.SuspendLayout();
+            panel1 = new Panel();
+            pbxLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbxMyIncidents).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxReportIncident).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxLogOut).BeginInit();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxInProgress).BeginInit();
+            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxResolved).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxTotal_Icidents).BeginInit();
+            panel5.SuspendLayout();
+            panel2.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxProfile).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxLogo).BeginInit();
             SuspendLayout();
             // 
-            // pbxLogo
+            // lblDateReported
             // 
-            pbxLogo.BackColor = Color.FromArgb(0, 0, 64);
-            pbxLogo.Image = (Image)resources.GetObject("pbxLogo.Image");
-            pbxLogo.Location = new Point(8, 2);
-            pbxLogo.Margin = new Padding(2);
-            pbxLogo.Name = "pbxLogo";
-            pbxLogo.Size = new Size(36, 62);
-            pbxLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxLogo.TabIndex = 6;
-            pbxLogo.TabStop = false;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(lblWelcomeLoggedInUser);
-            panel1.Controls.Add(pbxProfile);
-            panel1.Controls.Add(btnLogOut);
-            panel1.Controls.Add(lblResQLink);
-            panel1.Controls.Add(btnActiveIncidents);
-            panel1.Controls.Add(btnRreportIncidents);
-            panel1.Controls.Add(btnDashboard);
-            panel1.Controls.Add(pbxLogo);
-            panel1.Location = new Point(5, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(215, 603);
-            panel1.TabIndex = 7;
-            // 
-            // lblWelcomeLoggedInUser
-            // 
-            lblWelcomeLoggedInUser.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblWelcomeLoggedInUser.ForeColor = Color.White;
-            lblWelcomeLoggedInUser.Location = new Point(80, 69);
-            lblWelcomeLoggedInUser.Name = "lblWelcomeLoggedInUser";
-            lblWelcomeLoggedInUser.Size = new Size(110, 66);
-            lblWelcomeLoggedInUser.TabIndex = 16;
-            // 
-            // pbxProfile
-            // 
-            pbxProfile.Image = (Image)resources.GetObject("pbxProfile.Image");
-            pbxProfile.Location = new Point(3, 69);
-            pbxProfile.Name = "pbxProfile";
-            pbxProfile.Size = new Size(71, 49);
-            pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxProfile.TabIndex = 15;
-            pbxProfile.TabStop = false;
-            // 
-            // btnLogOut
-            // 
-            btnLogOut.BackColor = Color.FromArgb(0, 0, 64);
-            btnLogOut.FlatAppearance.BorderSize = 0;
-            btnLogOut.FlatStyle = FlatStyle.Flat;
-            btnLogOut.ForeColor = Color.White;
-            btnLogOut.Location = new Point(8, 358);
-            btnLogOut.Margin = new Padding(4);
-            btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(199, 36);
-            btnLogOut.TabIndex = 12;
-            btnLogOut.Text = "Log Out";
-            btnLogOut.UseVisualStyleBackColor = false;
-            btnLogOut.Click += btnLogOut_Click;
-            // 
-            // lblResQLink
-            // 
-            lblResQLink.AutoSize = true;
-            lblResQLink.BackColor = Color.FromArgb(0, 0, 64);
-            lblResQLink.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblResQLink.ForeColor = Color.White;
-            lblResQLink.Location = new Point(50, 17);
-            lblResQLink.Margin = new Padding(4, 0, 4, 0);
-            lblResQLink.Name = "lblResQLink";
-            lblResQLink.Size = new Size(91, 25);
-            lblResQLink.TabIndex = 14;
-            lblResQLink.Text = "ResQLink";
-            // 
-            // btnActiveIncidents
-            // 
-            btnActiveIncidents.BackColor = Color.FromArgb(0, 0, 64);
-            btnActiveIncidents.FlatAppearance.BorderSize = 0;
-            btnActiveIncidents.FlatStyle = FlatStyle.Flat;
-            btnActiveIncidents.ForeColor = Color.White;
-            btnActiveIncidents.Location = new Point(8, 301);
-            btnActiveIncidents.Margin = new Padding(4);
-            btnActiveIncidents.Name = "btnActiveIncidents";
-            btnActiveIncidents.Size = new Size(199, 36);
-            btnActiveIncidents.TabIndex = 13;
-            btnActiveIncidents.Text = "Active Incidents";
-            btnActiveIncidents.UseVisualStyleBackColor = false;
-            // 
-            // btnRreportIncidents
-            // 
-            btnRreportIncidents.BackColor = Color.FromArgb(0, 0, 64);
-            btnRreportIncidents.FlatAppearance.BorderSize = 0;
-            btnRreportIncidents.FlatStyle = FlatStyle.Flat;
-            btnRreportIncidents.ForeColor = Color.White;
-            btnRreportIncidents.Location = new Point(8, 245);
-            btnRreportIncidents.Margin = new Padding(4);
-            btnRreportIncidents.Name = "btnRreportIncidents";
-            btnRreportIncidents.Size = new Size(199, 36);
-            btnRreportIncidents.TabIndex = 12;
-            btnRreportIncidents.Text = "Report Incidents";
-            btnRreportIncidents.TextAlign = ContentAlignment.BottomCenter;
-            btnRreportIncidents.UseVisualStyleBackColor = false;
-            btnRreportIncidents.Click += btnRreportIncidents_Click;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.BackColor = Color.FromArgb(0, 0, 64);
-            btnDashboard.FlatAppearance.BorderSize = 0;
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(8, 182);
-            btnDashboard.Margin = new Padding(4);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(199, 36);
-            btnDashboard.TabIndex = 11;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(panel5);
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(panel3);
-            panel2.Location = new Point(226, 12);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(963, 603);
-            panel2.TabIndex = 8;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.White;
-            panel5.Controls.Add(pbxMyIncidents);
-            panel5.Controls.Add(pbxReportIncident);
-            panel5.Controls.Add(pbxLogOut);
-            panel5.Controls.Add(lblQuickActions);
-            panel5.Location = new Point(786, 124);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(183, 468);
-            panel5.TabIndex = 2;
+            lblDateReported.AutoSize = true;
+            lblDateReported.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDateReported.Location = new Point(585, 58);
+            lblDateReported.Name = "lblDateReported";
+            lblDateReported.Size = new Size(137, 25);
+            lblDateReported.TabIndex = 6;
+            lblDateReported.Text = "Date Reported";
             // 
             // pbxMyIncidents
             // 
@@ -238,7 +108,6 @@
             pbxReportIncident.SizeMode = PictureBoxSizeMode.Zoom;
             pbxReportIncident.TabIndex = 8;
             pbxReportIncident.TabStop = false;
-            pbxReportIncident.Click += pbxReportIncidents_Click;
             // 
             // pbxLogOut
             // 
@@ -250,51 +119,6 @@
             pbxLogOut.SizeMode = PictureBoxSizeMode.Zoom;
             pbxLogOut.TabIndex = 8;
             pbxLogOut.TabStop = false;
-            pbxLogOut.Click += pbxLogOut_Click;
-            // 
-            // lblQuickActions
-            // 
-            lblQuickActions.AutoSize = true;
-            lblQuickActions.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQuickActions.Location = new Point(18, 21);
-            lblQuickActions.Name = "lblQuickActions";
-            lblQuickActions.Size = new Size(136, 25);
-            lblQuickActions.TabIndex = 0;
-            lblQuickActions.Text = "Quick Actions";
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.White;
-            panel4.Controls.Add(txtDisplayRecentIncidents);
-            panel4.Controls.Add(lblDateReported);
-            panel4.Controls.Add(lblStatus);
-            panel4.Controls.Add(lblLocation);
-            panel4.Controls.Add(lblType);
-            panel4.Controls.Add(lbl_ID);
-            panel4.Controls.Add(lblRecentIcidents);
-            panel4.Location = new Point(3, 124);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(777, 476);
-            panel4.TabIndex = 1;
-            // 
-            // txtDisplayRecentIncidents
-            // 
-            txtDisplayRecentIncidents.Location = new Point(-3, 86);
-            txtDisplayRecentIncidents.Multiline = true;
-            txtDisplayRecentIncidents.Name = "txtDisplayRecentIncidents";
-            txtDisplayRecentIncidents.ReadOnly = true;
-            txtDisplayRecentIncidents.Size = new Size(777, 336);
-            txtDisplayRecentIncidents.TabIndex = 7;
-            // 
-            // lblDateReported
-            // 
-            lblDateReported.AutoSize = true;
-            lblDateReported.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDateReported.Location = new Point(585, 58);
-            lblDateReported.Name = "lblDateReported";
-            lblDateReported.Size = new Size(137, 25);
-            lblDateReported.TabIndex = 6;
-            lblDateReported.Text = "Date Reported";
             // 
             // lblStatus
             // 
@@ -345,22 +169,6 @@
             lblRecentIcidents.Size = new Size(159, 25);
             lblRecentIcidents.TabIndex = 2;
             lblRecentIcidents.Text = "Recent Incidents";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.White;
-            panel3.Controls.Add(lblUnresolvedIncidents);
-            panel3.Controls.Add(lbl_InProgressIncidents);
-            panel3.Controls.Add(lblResolved_Incidents);
-            panel3.Controls.Add(lblTotal_Incidents);
-            panel3.Controls.Add(pictureBox4);
-            panel3.Controls.Add(pbxInProgress);
-            panel3.Controls.Add(pbxResolved);
-            panel3.Controls.Add(pbxTotal_Icidents);
-            panel3.Location = new Point(6, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(954, 115);
-            panel3.TabIndex = 0;
             // 
             // lblUnresolvedIncidents
             // 
@@ -424,6 +232,22 @@
             pbxInProgress.TabIndex = 10;
             pbxInProgress.TabStop = false;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(lblUnresolvedIncidents);
+            panel3.Controls.Add(lbl_InProgressIncidents);
+            panel3.Controls.Add(lblResolved_Incidents);
+            panel3.Controls.Add(lblTotal_Incidents);
+            panel3.Controls.Add(pictureBox4);
+            panel3.Controls.Add(pbxInProgress);
+            panel3.Controls.Add(pbxResolved);
+            panel3.Controls.Add(pbxTotal_Icidents);
+            panel3.Location = new Point(6, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(954, 115);
+            panel3.TabIndex = 0;
+            // 
             // pbxResolved
             // 
             pbxResolved.Image = (Image)resources.GetObject("pbxResolved.Image");
@@ -445,6 +269,179 @@
             pbxTotal_Icidents.TabIndex = 8;
             pbxTotal_Icidents.TabStop = false;
             // 
+            // lblQuickActions
+            // 
+            lblQuickActions.AutoSize = true;
+            lblQuickActions.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblQuickActions.Location = new Point(18, 21);
+            lblQuickActions.Name = "lblQuickActions";
+            lblQuickActions.Size = new Size(136, 25);
+            lblQuickActions.TabIndex = 0;
+            lblQuickActions.Text = "Quick Actions";
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.White;
+            panel5.Controls.Add(pbxMyIncidents);
+            panel5.Controls.Add(pbxReportIncident);
+            panel5.Controls.Add(pbxLogOut);
+            panel5.Controls.Add(lblQuickActions);
+            panel5.Location = new Point(786, 124);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(183, 468);
+            panel5.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(panel3);
+            panel2.Location = new Point(229, 12);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(963, 603);
+            panel2.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.White;
+            panel4.Controls.Add(txtDisplayRecentIncidents);
+            panel4.Controls.Add(lblDateReported);
+            panel4.Controls.Add(lblStatus);
+            panel4.Controls.Add(lblLocation);
+            panel4.Controls.Add(lblType);
+            panel4.Controls.Add(lbl_ID);
+            panel4.Controls.Add(lblRecentIcidents);
+            panel4.Location = new Point(3, 124);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(777, 476);
+            panel4.TabIndex = 1;
+            // 
+            // txtDisplayRecentIncidents
+            // 
+            txtDisplayRecentIncidents.Location = new Point(-3, 86);
+            txtDisplayRecentIncidents.Multiline = true;
+            txtDisplayRecentIncidents.Name = "txtDisplayRecentIncidents";
+            txtDisplayRecentIncidents.ReadOnly = true;
+            txtDisplayRecentIncidents.Size = new Size(777, 336);
+            txtDisplayRecentIncidents.TabIndex = 7;
+            // 
+            // lblWelcomeLoggedInUser
+            // 
+            lblWelcomeLoggedInUser.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblWelcomeLoggedInUser.ForeColor = Color.White;
+            lblWelcomeLoggedInUser.Location = new Point(80, 69);
+            lblWelcomeLoggedInUser.Name = "lblWelcomeLoggedInUser";
+            lblWelcomeLoggedInUser.Size = new Size(110, 66);
+            lblWelcomeLoggedInUser.TabIndex = 16;
+            // 
+            // pbxProfile
+            // 
+            pbxProfile.Image = (Image)resources.GetObject("pbxProfile.Image");
+            pbxProfile.Location = new Point(3, 69);
+            pbxProfile.Name = "pbxProfile";
+            pbxProfile.Size = new Size(71, 49);
+            pbxProfile.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxProfile.TabIndex = 15;
+            pbxProfile.TabStop = false;
+            // 
+            // btnLogOut
+            // 
+            btnLogOut.BackColor = Color.FromArgb(0, 0, 64);
+            btnLogOut.FlatAppearance.BorderSize = 0;
+            btnLogOut.FlatStyle = FlatStyle.Flat;
+            btnLogOut.ForeColor = Color.White;
+            btnLogOut.Location = new Point(8, 358);
+            btnLogOut.Margin = new Padding(4);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(199, 36);
+            btnLogOut.TabIndex = 12;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = false;
+            // 
+            // lblResQLink
+            // 
+            lblResQLink.AutoSize = true;
+            lblResQLink.BackColor = Color.FromArgb(0, 0, 64);
+            lblResQLink.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResQLink.ForeColor = Color.White;
+            lblResQLink.Location = new Point(50, 17);
+            lblResQLink.Margin = new Padding(4, 0, 4, 0);
+            lblResQLink.Name = "lblResQLink";
+            lblResQLink.Size = new Size(91, 25);
+            lblResQLink.TabIndex = 14;
+            lblResQLink.Text = "ResQLink";
+            // 
+            // btnActiveIncidents
+            // 
+            btnActiveIncidents.BackColor = Color.FromArgb(0, 0, 64);
+            btnActiveIncidents.FlatAppearance.BorderSize = 0;
+            btnActiveIncidents.FlatStyle = FlatStyle.Flat;
+            btnActiveIncidents.ForeColor = Color.White;
+            btnActiveIncidents.Location = new Point(8, 301);
+            btnActiveIncidents.Margin = new Padding(4);
+            btnActiveIncidents.Name = "btnActiveIncidents";
+            btnActiveIncidents.Size = new Size(199, 36);
+            btnActiveIncidents.TabIndex = 13;
+            btnActiveIncidents.Text = "Active Incidents";
+            btnActiveIncidents.UseVisualStyleBackColor = false;
+            btnActiveIncidents.Click += btnActiveIncidents_Click;
+            // 
+            // btnRreportIncidents
+            // 
+            btnRreportIncidents.BackColor = Color.FromArgb(0, 0, 64);
+            btnRreportIncidents.FlatAppearance.BorderSize = 0;
+            btnRreportIncidents.FlatStyle = FlatStyle.Flat;
+            btnRreportIncidents.ForeColor = Color.White;
+            btnRreportIncidents.Location = new Point(8, 245);
+            btnRreportIncidents.Margin = new Padding(4);
+            btnRreportIncidents.Name = "btnRreportIncidents";
+            btnRreportIncidents.Size = new Size(199, 36);
+            btnRreportIncidents.TabIndex = 12;
+            btnRreportIncidents.Text = "Report Incidents";
+            btnRreportIncidents.TextAlign = ContentAlignment.BottomCenter;
+            btnRreportIncidents.UseVisualStyleBackColor = false;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.FromArgb(0, 0, 64);
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Location = new Point(8, 182);
+            btnDashboard.Margin = new Padding(4);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(199, 36);
+            btnDashboard.TabIndex = 11;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(lblWelcomeLoggedInUser);
+            panel1.Controls.Add(pbxProfile);
+            panel1.Controls.Add(btnLogOut);
+            panel1.Controls.Add(lblResQLink);
+            panel1.Controls.Add(btnActiveIncidents);
+            panel1.Controls.Add(btnRreportIncidents);
+            panel1.Controls.Add(btnDashboard);
+            panel1.Controls.Add(pbxLogo);
+            panel1.Location = new Point(8, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(215, 603);
+            panel1.TabIndex = 9;
+            // 
+            // pbxLogo
+            // 
+            pbxLogo.BackColor = Color.FromArgb(0, 0, 64);
+            pbxLogo.Image = (Image)resources.GetObject("pbxLogo.Image");
+            pbxLogo.Location = new Point(8, 2);
+            pbxLogo.Margin = new Padding(2);
+            pbxLogo.Name = "pbxLogo";
+            pbxLogo.Size = new Size(36, 62);
+            pbxLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxLogo.TabIndex = 6;
+            pbxLogo.TabStop = false;
+            // 
             // frmCustomer_Dashboard
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -456,59 +453,59 @@
             Name = "frmCustomer_Dashboard";
             Text = "Customer_Dashboard";
             Load += Customer_Dashboard_Load;
-            ((System.ComponentModel.ISupportInitialize)pbxLogo).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();
-            panel2.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxMyIncidents).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxReportIncident).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxLogOut).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxInProgress).EndInit();
+            panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbxResolved).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxTotal_Icidents).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxProfile).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxLogo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pbxLogo;
-        private Panel panel1;
-        private Button btnActiveIncidents;
-        private Button btnRreportIncidents;
-        private Button btnDashboard;
-        private Label lblResQLink;
-        private Panel panel2;
-        private Button btnLogOut;
-        private Panel panel5;
-        private Panel panel4;
-        private Panel panel3;
-        private Label lblWelcomeLoggedInUser;
-        private PictureBox pbxProfile;
-        private Label lbl_ID;
-        private Label lblQuickActions;
-        private Label lblRecentIcidents;
         private Label lblDateReported;
+        private PictureBox pbxMyIncidents;
+        private PictureBox pbxReportIncident;
+        private PictureBox pbxLogOut;
         private Label lblStatus;
         private Label lblLocation;
         private Label lblType;
-        private TextBox txtDisplayRecentIncidents;
-        private PictureBox pbxLogOut;
-        private PictureBox pbxMyIncidents;
-        private PictureBox pbxReportIncident;
-        private PictureBox pictureBox4;
-        private PictureBox pbxInProgress;
-        private PictureBox pbxResolved;
-        private PictureBox pbxTotal_Icidents;
+        private Label lbl_ID;
+        private Label lblRecentIcidents;
         private Label lblUnresolvedIncidents;
         private Label lbl_InProgressIncidents;
         private Label lblResolved_Incidents;
         private Label lblTotal_Incidents;
+        private PictureBox pictureBox4;
+        private PictureBox pbxInProgress;
+        private Panel panel3;
+        private PictureBox pbxResolved;
+        private PictureBox pbxTotal_Icidents;
+        private Label lblQuickActions;
+        private Panel panel5;
+        private Panel panel2;
+        private Panel panel4;
+        private TextBox txtDisplayRecentIncidents;
+        private Label lblWelcomeLoggedInUser;
+        private PictureBox pbxProfile;
+        private Button btnLogOut;
+        private Label lblResQLink;
+        private Button btnActiveIncidents;
+        private Button btnRreportIncidents;
+        private Button btnDashboard;
+        private Panel panel1;
+        private PictureBox pbxLogo;
     }
 }

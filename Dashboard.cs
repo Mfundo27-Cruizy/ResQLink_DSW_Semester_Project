@@ -23,7 +23,7 @@ namespace DSW_Semester_Project
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
-        { 
+        {
 
         }
 
@@ -49,11 +49,17 @@ namespace DSW_Semester_Project
         }
 
         private void Customer_Dashboard_Load(object sender, EventArgs e)
-        { 
+        {
             string name = CurrentUser.User.FullName;
 
-            lblWelcomeLoggedInUser.Text = "Welcome " + name; 
+            lblWelcomeLoggedInUser.Text = "Welcome " + name;
         }
-      
+
+        private void btnActiveIncidents_Click(object sender, EventArgs e)
+        {
+            frmActiveIncidents activeIncidents = new frmActiveIncidents();
+            activeIncidents.Show();
+            this.Hide();
+        }
     }
 }
